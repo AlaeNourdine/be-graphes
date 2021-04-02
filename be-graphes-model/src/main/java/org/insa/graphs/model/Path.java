@@ -210,12 +210,19 @@ public class Path {
      * 
      * @return Total length of the path (in meters).
      * 
-     * @deprecated Need to be implemented.
+     * 
      */
+
     public float getLength() {
-        // TODO:
-        return 0;
+    	float Length = 0.0f ; 
+        	
+    	for(Arc myArc : this.arcs ) {
+    		Length += myArc.getLength() ; 
+    	}
+        	
+    	return Length;
     }
+    
 
     /**
      * Compute the time required to travel this path if moving at the given speed.
