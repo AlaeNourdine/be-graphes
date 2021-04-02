@@ -232,11 +232,16 @@ public class Path {
      * @return Time (in seconds) required to travel this path at the given speed (in
      *         kilometers-per-hour).
      * 
-     * @deprecated Need to be implemented.
+     * 
      */
-    public double getTravelTime(double speed) {
-        // TODO:
-        return 0;
+    public double getTravelTime(double speed) {	
+        double Time = 0.0 ;
+        float Length = getLength()  ;  
+        double Speed_m_s = speed * (10.0/36.0) ;
+        
+        Time = Length / Speed_m_s ; 
+        
+        return Time ;
     }
 
     /**
